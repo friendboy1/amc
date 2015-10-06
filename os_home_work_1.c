@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 int main()
 {
@@ -25,7 +28,7 @@ int main()
     strcat (str2, ".txt");
     f = fopen(str2, "w+");
     fprintf(f, "I am: %d and my child: %d; \n", getpid(), pid);
-    wait();
+    waitpid(pid, NULL, 0);
     fclose(f);
   }
   return 0;
