@@ -1,0 +1,19 @@
+os_home_work_1.c:10:11: warning: implicit declaration of function 'fork' is invalid in C99
+      [-Wimplicit-function-declaration]
+  if((pid=fork()) == 0)
+          ^
+os_home_work_1.c:13:10: warning: implicit declaration of function 'getpid' is invalid in C99
+      [-Wimplicit-function-declaration]
+    gcvt(getpid(), 12, str3);
+         ^
+os_home_work_1.c:17:33: warning: implicit declaration of function 'getppid' is invalid in C99
+      [-Wimplicit-function-declaration]
+    fprintf(f, "Parent: %d;\n", getppid());
+                                ^
+os_home_work_1.c:28:10: error: too few arguments to function call, expected 1, have 0
+    wait();
+    ~~~~ ^
+/usr/include/sys/wait.h:248:1: note: 'wait' declared here
+pid_t   wait(int *) __DARWIN_ALIAS_C(wait);
+^
+3 warnings and 1 error generated.
